@@ -43,8 +43,8 @@ spec:
       labels:
         app: wordpress
         tier: frontend
-  spec:
-    containers:
+    spec:
+      containers:
       - image: wordpress:4.8-apache
         name: wordpress
         env:
@@ -61,7 +61,7 @@ spec:
         volumeMounts:
         - name: wordpress-persistent-storage-lab
           mountPath: /var/www/html
-    volumes:
+      volumes:
       - name: wordpress-persistent-storage-lab
         persistentVolumeClaim:
           claimName: wp-pv-claim
